@@ -6,8 +6,8 @@ export const queueItemSchema = z.object({
   number: z.number(),
   title: z.string(),
   created_at: z.string(),
-  updated_at: z.string(),
-  mergeable: z.boolean(),
+  merged_at: z.string().nullable(), // Time when PR was merged
+  duration_minutes: z.number(), // Time taken to merge
   state: z.string(),
 });
 
