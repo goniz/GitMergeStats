@@ -29,10 +29,12 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background text-foreground">
       <div className="container mx-auto p-4">
-        <h1 className="text-4xl font-bold mb-8 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-          Merge Queue Statistics
+        <h1 className="text-4xl font-bold mb-8">
+          <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+            Merge Queue Statistics
+          </span>
         </h1>
 
         <div className="grid gap-4 md:grid-cols-3 mb-8">
