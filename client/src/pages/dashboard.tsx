@@ -9,7 +9,7 @@ import { fetchQueueStats } from "@/lib/github";
 
 export default function Dashboard() {
   const { data, error, isLoading } = useQuery({
-    queryKey: ["/api/queue-stats"],
+    queryKey: ['queue-stats'],
     queryFn: fetchQueueStats,
     refetchInterval: 30000, // Refresh every 30 seconds
   });
