@@ -22,9 +22,8 @@ function AppRouter() {
     <WouterRouter base={getBasePath()}>
       <Switch>
         <Route path="/">
-          <Redirect to="/GitMergeStats" />
+          <Dashboard />
         </Route>
-        <Route path="/GitMergeStats" component={Dashboard} />
       </Switch>
     </WouterRouter>
   );
