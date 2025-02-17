@@ -6,10 +6,15 @@ import Dashboard from "@/pages/dashboard";
 
 // Get the base path from the URL or use "/" for local development
 const getBasePath = () => {
-  // When deployed to GitHub Pages, the site will be in a subdirectory
-  const path = window.location.pathname;
-  const base = path.split('/').slice(0, -1).join('/');
-  return base || '/';
+  const repoName = import.meta.env.VITE_REPO_NAME || '';
+
+  // When in development or production, handle paths accordingly
+  if (window.location.hostname === 'localhost' || window.location.hostname === '0.0.0.0') {
+    return '/';
+  }
+
+  // For GitHub Pages deployment
+  return `/${repoName}`;
 };
 
 function AppRouter() {
