@@ -6,7 +6,7 @@ import Dashboard from "@/pages/dashboard";
 
 // Get the base path from the URL or use "/" for local development
 const getBasePath = () => {
-  const repoName = import.meta.env.VITE_REPO_NAME || '';
+  const repoName = import.meta.env.VITE_REPO_NAME || 'GitMergeStats';
 
   // When in development or production, handle paths accordingly
   if (window.location.hostname === 'localhost' || window.location.hostname === '0.0.0.0') {
